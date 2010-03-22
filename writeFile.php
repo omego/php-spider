@@ -1,8 +1,23 @@
+<html>
+<head>
+	<title>spider</title>
+</head>
+
+<body>
+
 <?php
 $myfile = "text.txt";
+$text = $_POST['url'];
 $file_write = fopen($myfile, 'w') or die("can't open file");
-$stringData = "Hello World";
-fwrite($file_write, $stringData);
+fwrite($file_write, $text);
 fclose($file_write);
 ?>
 
+<h4>Enter some text</h4>
+<form action="writeFile.php" method="post"> 
+<input name="url" type="text" /> 
+<input type="submit" />
+</form>
+
+</body>
+</html>
