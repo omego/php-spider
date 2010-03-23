@@ -7,7 +7,11 @@
 <?php
 if (isset($_POST['url']) && !empty($_POST['url'])) {
 	$myurl = $_POST['url'];
+    $myfile = "text.txt";
 	$thedata = file_get_contents($myurl);
+    $file_write = fopen($myfile, 'w') or die("can't open file");
+    fwrite($file_write, $thedata);
+	fclose($file_write);
 	echo "<h2>URL: $myurl</h2><hr />";
     echo $thedata;
 }
