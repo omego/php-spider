@@ -6,11 +6,9 @@
 <body>
 <?php
 if (isset($_POST['url']) && !empty($_POST['url'])) {
-	$myUrl = 'http://www.mazen.ws';
-	$text = $_POST['url'];
-    $myfile = "text.txt";
-    $file_read = fopen($myfile,'r');
-    $thedata = fread($file_read, filesize($myfile));
+	$myurl = $_POST['url'];
+    $file_read = fopen($myurl,'r');
+    $thedata = fread($file_read, filesize($myurl));
     fclose($file_read);
     echo $text;
     
