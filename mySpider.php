@@ -10,7 +10,7 @@ if (isset($_POST['url']) && !empty($_POST['url'])) {
     $file_read = fopen($myurl,'r');
     $thedata = fread($file_read, filesize($myurl));
     fclose($file_read);
-    echo $text;
+    echo $thedata;
     
 }
 
