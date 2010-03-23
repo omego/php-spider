@@ -7,13 +7,10 @@
 <?php
 if (isset($_POST['url']) && !empty($_POST['url'])) {
 	$myurl = $_POST['url'];
-    $file_read = fopen($myurl,'r');
-    $thedata = fread($file_read, filesize($myurl));
-    fclose($file_read);
+	$thedata = file_get_contents($myurl);
+	echo "<h2>URL: $myurl</h2><hr />";
     echo $thedata;
-    
 }
-
 ?>
 <h4>Enter URL</h4>
 <form action="mySpider.php" method="post"> 
