@@ -6,7 +6,6 @@
 <body>
 <?php
 if (isset($_POST['url']) && !empty($_POST['url'])) {
-	$myfile = "text.txt";
 	$text = $_POST['url'];
     echo $text;
 }
