@@ -6,6 +6,7 @@
 <body>
 <?php
 if (isset($_POST['url']) && !empty($_POST['url'])) {
+	$myUrl = "http://www.mazen.ws";
 	$text = $_POST['url'];
     echo $text;
 }
