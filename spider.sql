@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Mar 24, 2010 at 04:05 AM
+-- Generation Time: Mar 24, 2010 at 04:22 AM
 -- Server version: 5.1.30
 -- PHP Version: 5.2.8
 
@@ -16,22 +16,23 @@ SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 /*!40101 SET NAMES utf8 */;
 
 --
--- Database: ` spider`
+-- Database: `spider`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table ` spider_pages`
+-- Table structure for table `spider_pages`
 --
 
-CREATE TABLE IF NOT EXISTS ` spider_pages` (
-  `id int AUT_INCREMENT` int(11) NOT NULL,
-  `url varchar(255)` int(11) NOT NULL,
-  `content text` int(11) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+CREATE TABLE IF NOT EXISTS `spider_pages` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `url` varchar(255) NOT NULL,
+  `content` text NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 --
--- Dumping data for table ` spider_pages`
+-- Dumping data for table `spider_pages`
 --
 
